@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TimePicker</string>
+
+
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_EMMMMdy">EEE, MMMM d, y</string>
+    <string name="datetime_EMMMd">EEE, MMM d</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_hm">h:mm a</string>
+
+
+    <integer name="date_picker_mode">1</integer>
+    <integer name="time_picker_mode">2</integer>
+
+    <!-- Specifies time picker mode to be 'clock' -->
+    <integer name="time_picker_mode_material">2</integer>
+
+    <integer name="date_picker_header_max_lines_material">2</integer>
+
+    <string name="select_hours">Select hours</string>
+    <string name="select_minutes">Select minutes</string>
+    <string name="time_picker_radial_mode_description">Switch to clock mode for the time input.</string>
+    <string name="time_picker_text_input_mode_description">Switch to text input mode for the time input.</string>
+
+    <string name="time_picker_increment_minute_button">Increase minute</string>
+    <string name="time_picker_decrement_minute_button">Decrease minute</string>
+    <string name="time_picker_increment_hour_button">Increase hour</string>
+    <string name="time_picker_decrement_hour_button">Decrease hour</string>
+    <string name="time_picker_increment_set_pm_button">Set PM</string>
+    <string name="time_picker_decrement_set_am_button">Set AM</string>
+
+    <string name="time_picker_minute_label">minute</string>
+
+    <string name="time_picker_header_text">Set time</string>
+    <string name="time_picker_input_error">Enter a valid time</string>
+    <string name="time_picker_prompt_label">Type in time</string>
+    <string name="time_picker_hour_label">hour</string>
+</resources>

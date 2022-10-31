@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2013 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<!-- This layout is duplicated in land/time_picker_material.xml, so any
+     changes made here need to be manually copied over. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/time_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/timepicker_header_height"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp">
+
+    <!-- The hour should always be to the left of the separator,
+         regardless of the current locale's layout direction. -->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.example.timepicker.timepicker.NumericTextView
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/time_picker_editable_background"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:gravity="right"
+            android:nextFocusForward="@id/minutes"
+            android:pointerIcon="hand"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Material.TimePicker.TimeLabel"
+            android:textStyle="bold"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/timepicker_separator_padding"
+            android:layout_marginRight="@dimen/timepicker_separator_padding"
+            android:importantForAccessibility="no"
+            android:textAppearance="@style/TextAppearance.Material.TimePicker.TimeLabel"
+            android:textStyle="bold"
+            tools:text=":" />
+
+        <!-- The minutes should always be to the left of the separator,
+             regardless of the current locale's layout direction. -->
+        <com.example.timepicker.timepicker.NumericTextView
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/time_picker_editable_background"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:gravity="left"
+            android:nextFocusForward="@id/am_label"
+            android:pointerIcon="hand"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Material.TimePicker.TimeLabel"
+            android:textStyle="bold"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/tvAmOrPm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="1dp"
+            android:importantForAccessibility="no"
+            android:textAppearance="@style/TextAppearance.Material.TimePicker.TimeLabel"
+            android:textStyle="bold"
+            tools:text="AM" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- The layout alignment of this view will switch between toRightOf
+         @id/minutes and toLeftOf @id/hours depending on the locale. -->
+    <RadioGroup
+        android:id="@+id/ampm_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="7dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/am_label"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/bg_circle_selector"
+            android:button="@null"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:nextFocusForward="@+id/pm_label"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Material.TimePicker.AmPmLabel"
+            android:textStyle="bold"
+            app:buttonCompat="@null"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck"
+            tools:text="AM" />
+
+        <RadioButton
+            android:id="@+id/pm_label"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/bg_circle_selector"
+            android:button="@null"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Material.TimePicker.AmPmLabel"
+            android:textStyle="bold"
+            app:buttonCompat="@null"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:text="PM" />
+    </RadioGroup>
+</RelativeLayout>

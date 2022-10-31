@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#EF6000</color>
+    <color name="grey">#676767</color>
+    <color name="grey_1">#9E676767</color>
+    <color name="light_grey">#F5F5F5</color>
+    <color name="dark_blue">#2F4B79</color>
+
+
+    <color name="timepicker_default_background_material">
+        @color/primary_text_default_material_light
+    </color>
+    <color name="timepicker_default_text_color_material">@android:color/black</color>
+    <color name="timepicker_default_ampm_selected_background_color_material">
+        @color/material_deep_teal_200
+    </color>
+    <color name="timepicker_default_ampm_unselected_background_color_material">
+        @android:color/transparent
+    </color>
+    <color name="timepicker_default_selector_color_material">@color/material_deep_teal_200</color>
+    <color name="timepicker_default_numbers_background_color_material">@android:color/transparent</color>
+
+
+
+
+</resources>
