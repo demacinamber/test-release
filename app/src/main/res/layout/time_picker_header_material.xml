@@ -25,6 +25,7 @@
     android:layout_marginStart="20dp"
     android:layout_marginEnd="20dp">
 
+
     <!-- The hour should always be to the left of the separator,
          regardless of the current locale's layout direction. -->
 
